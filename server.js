@@ -55,7 +55,13 @@ app.get('/bad', (req, res) => {
         status: 500,
         error: 'Error handling request'
     });
-})
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Port Folio'
+    });
+});
 
 app.listen(port, () => {
     console.log(`server up on port ${port}`);
